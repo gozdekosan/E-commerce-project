@@ -5,9 +5,6 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 
-import summerImg1 from "../images/summer-collection-1.png";
-import summerImg2 from "../images/summer-collection-2.png";
-
 const slidesContent = [
   {
     id: 1,
@@ -16,7 +13,6 @@ const slidesContent = [
     description:
       "We know how large objects will act, We know how are objects will act, We know",
     price: "$16.48",
-    personImage: summerImg1,
     bgColorClass: "bg-[#23856D]",
     buttonText: "ADD TO CART",
     buttonLink: "/cart",
@@ -28,7 +24,6 @@ const slidesContent = [
     description:
       "We know how large objects will act, We know how are objects will act, We know",
     price: "$16.48",
-    personImage: summerImg1,
     bgColorClass: "bg-[#23856D]",
     buttonText: "ADD TO CART",
     buttonLink: "/cart",
@@ -39,7 +34,6 @@ const promoBlockContent = {
   title: "Part of the Neural Universe",
   subtitle: "SUMMER 2020",
   description: "We know how large objects will act, but things on a small scale.",
-  image: summerImg2,
   buyNowLink: "/shop",
   readMoreLink: "/about",
 };
@@ -109,7 +103,7 @@ export default function SummerCollection() {
 
               <div className="absolute right-0 top-0 h-full w-1/2 flex items-end justify-end">
                 <img
-                  src={slide.personImage}
+                  src="/images/summer-collection-1.png"
                   alt={slide.title}
                   className="h-full w-auto object-contain object-bottom"
                 />
@@ -122,7 +116,7 @@ export default function SummerCollection() {
       <div className="max-w-[71.25rem] mx-auto flex flex-col md:flex-row items-stretch my-16 px-4 sm:px-6 lg:px-8 h-auto md:h-[37.5rem] gap-6 md:gap-0">
         <div className="w-full md:w-2/5 flex items-stretch">
           <img
-            src={promoBlockContent.image}
+            src="/images/summer-collection-2.png"
             alt="Promo image"
             className="w-full h-full object-cover"
           />

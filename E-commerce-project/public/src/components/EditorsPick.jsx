@@ -1,14 +1,13 @@
+import { Link } from 'react-router-dom';  // Link'i import ettik (href yerine SPA navigasyonu için)
 
- export const editorsProducts = [
+export const editorsProducts = [
   { id: 1, title: "MEN", link: "/shop/men", image: "/images/men.png", size: "large" }, 
   { id: 2, title: "WOMEN", link: "/shop/women", image: "/images/women.png", size: "tall" }, 
   { id: 3, title: "ACCESSORIES", link: "/shop/accessories", image: "/images/accessories.png", size: "half-tall" }, 
   { id: 4, title: "KIDS", link: "/shop/kids", image: "/images/kids.png", size: "half-tall" } 
 ];
 
-
 const MAIN_HEIGHT_REM = '32rem'; 
-
 
 const CategoryCard = ({ title, link, image, size }) => {
 
@@ -19,7 +18,6 @@ const CategoryCard = ({ title, link, image, size }) => {
         title === "KIDS" ? "object-center" :    
         "object-center"; 
     
-
     let heightClass = 'h-60'; 
 
     if (size === 'large' || size === 'tall') {
@@ -29,8 +27,8 @@ const CategoryCard = ({ title, link, image, size }) => {
     }
 
     return (
-        <a
-            href={link}
+        <Link  // <a> yerine <Link> yaptık (React Router için, SPA dostu)
+            to={link}  // href yerine to kullandık
             className={`
                 relative w-full overflow-hidden transition duration-300 ease-in-out group
                 ${heightClass}
@@ -42,21 +40,17 @@ const CategoryCard = ({ title, link, image, size }) => {
                 className={`w-full h-full object-cover ${objectPosition} transition duration-300 group-hover:scale-105`} 
             />
 
-
             <div 
                 className="absolute bottom-6 left-6 px-6 py-2 
                            border-2 border-white text-black 
                            font-bold tracking-widest text-sm
-                           bg-white z-10"
-                onMouseEnter={e => e.currentTarget.classList.add('bg-white', 'text-gray-800')}
-                onMouseLeave={e => e.currentTarget.classList.remove('bg-white', 'text-gray-800')}
+                           bg-white z-10 hover:bg-white hover:text-gray-800 transition-colors"  // onMouseEnter/Leave yerine Tailwind hover: sınıfları ekledik (daha temiz, JS'siz)
             >
                 <h3>{title}</h3>
             </div>
-        </a>
+        </Link>
     );
 }
-
 
 export default function EditorsPick() {
   

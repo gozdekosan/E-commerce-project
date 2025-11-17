@@ -1,10 +1,11 @@
 import { Clock, MessageSquare, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom'; 
 
 const FeaturedPosts = () => {
   const posts = [
     {
       id: 1,
-      image: "/images/featuredpost-1.png",
+      image: "/images/featuredpost-1.png",  
       tags: ["Google", "Trending", "New"],
       title: "Loudest à la Madison #1 (L'integral)",
       description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
@@ -13,7 +14,7 @@ const FeaturedPosts = () => {
     },
     {
       id: 2,
-      image: "/images/featuredpost-2.png",
+      image: "/images/featuredpost-2.png", 
       tags: ["Google", "Trending", "New"],
       title: "Loudest à la Madison #1 (L'integral)",
       description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
@@ -39,7 +40,7 @@ const FeaturedPosts = () => {
           <p className="text-[#23A6F0] font-bold text-sm mb-2.5" style={{ fontFamily: 'Montserrat' }}>
             Practice Advice
           </p>
-          <h2 className="text-[2.5rem] font-base font-bold text-[#252B42] mb-2.5 leading-tight" style={{ fontFamily: 'Montserrat' }}>
+          <h2 className="text-[2.5rem] font-bold text-[#252B42] mb-2.5 leading-tight" style={{ fontFamily: 'Montserrat' }}>  {/* font-base'i font-bold yaptık (muhtemelen hata) */}
             Featured Posts
           </h2>
           <p className="text-[#737373] text-sm leading-relaxed font-normal" style={{ fontFamily: 'Montserrat' }}>
@@ -87,26 +88,26 @@ const FeaturedPosts = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-1.5 text-[#737373] text-xs" style={{ fontFamily: 'Montserrat' }}>
                     <Clock className="w-4 h-4" />
-                    <span>22 April 2021</span>
+                    <span>{post.date}</span> 
                   </div>
 
              
                   <div className="flex items-center gap-1.5 text-xs" style={{ fontFamily: 'Montserrat' }}>
                     <MessageSquare className="w-4 h-4 text-[#23856D]" />
-                    <span className="text-[#737373]">10 comments</span>
+                    <span className="text-[#737373]">{post.comments} comments</span>  
                   </div>
                 </div>
 
      
                 <div>
-                  <a 
-                    href="#" 
+                  <Link  
+                    to={`/posts/${post.id}`}  
                     className="inline-flex items-center gap-2 text-[#737373] hover:text-[#23A6F0] transition-colors text-sm font-bold"
                     style={{ fontFamily: 'Montserrat' }}
                   >
                     Learn More
                     <ChevronRight className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

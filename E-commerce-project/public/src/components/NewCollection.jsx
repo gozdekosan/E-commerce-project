@@ -4,7 +4,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules"; 
 import { Link } from "react-router-dom";
-import newCollectionBg from '../images/new-collection.png';
+
 
 const newCollectionSlides = [
   {
@@ -14,7 +14,7 @@ const newCollectionSlides = [
     description: "We know how large objects will act, but things on a small scale.",
     buttonText: "SHOP NOW",
     buttonLink: "/shop",
-    bgImage: newCollectionBg,
+    bgImage: "/images/new-collection.png",  
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const newCollectionSlides = [
     description: "We know how large objects will act, but things on a small scale.",
     buttonText: "SHOP NOW",
     buttonLink: "/shop",
-    bgImage: newCollectionBg,
+    bgImage: "/images/new-collection.png", 
   },
 ];
 
@@ -38,24 +38,23 @@ export default function NewCollection() {
         navigation
         pagination={{ clickable: true }}
         className="
-          h-[45rem]
-    h-[38.4375rem]
+          h-[38.4375rem]  // Tekrarlanan h- sınıfını temizledik
 
-    [&_.swiper-button-next]:!text-white
-    [&_.swiper-button-prev]:!text-white
+          [&_.swiper-button-next]:!text-white
+          [&_.swiper-button-prev]:!text-white
 
-    [&_.swiper-button-next:after]:!text-white
-    [&_.swiper-button-prev:after]:!text-white
+          [&_.swiper-button-next:after]:!text-white
+          [&_.swiper-button-prev:after]:!text-white
 
-    [&_.swiper-pagination-bullet]:!bg-white
-    [&_.swiper-pagination-bullet]:!opacity-50
-    [&_.swiper-pagination-bullet]:!w-12
-    [&_.swiper-pagination-bullet]:!h-2
-    [&_.swiper-pagination-bullet]:!rounded-none
-    [&_.swiper-pagination-bullet]:!m-0       
+          [&_.swiper-pagination-bullet]:!bg-white
+          [&_.swiper-pagination-bullet]:!opacity-50
+          [&_.swiper-pagination-bullet]:!w-12
+          [&_.swiper-pagination-bullet]:!h-2
+          [&_.swiper-pagination-bullet]:!rounded-none
+          [&_.swiper-pagination-bullet]:!m-0       
 
-    [&_.swiper-pagination-bullet-active]:!opacity-100
-  "
+          [&_.swiper-pagination-bullet-active]:!opacity-100
+        "
       >
         {newCollectionSlides.map((slide) => (
           <SwiperSlide key={slide.id}>
