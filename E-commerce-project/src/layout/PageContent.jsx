@@ -13,14 +13,12 @@ export default function PageContent() {
     <div className="w-full min-h-screen bg-white">
       <main className="flex-1 w-full max-w-none">
     
-        <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
 
           </Routes>
-        </BrowserRouter>
       </main>
     </div>
   );
