@@ -4,7 +4,7 @@ const FeaturedPosts = () => {
   const posts = [
     {
       id: 1,
-      image: "src/images/featuredpost-1.png",
+      image: "/images/featuredpost-1.png",
       tags: ["Google", "Trending", "New"],
       title: "Loudest à la Madison #1 (L'integral)",
       description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
@@ -13,7 +13,7 @@ const FeaturedPosts = () => {
     },
     {
       id: 2,
-      image: "src/images/featuredpost-2.png",
+      image: "/images/featuredpost-2.png",
       tags: ["Google", "Trending", "New"],
       title: "Loudest à la Madison #1 (L'integral)",
       description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
@@ -22,7 +22,7 @@ const FeaturedPosts = () => {
     },
     {
       id: 3,
-      image: "src/images/featuredpost-3.png",
+      image: "/images/featuredpost-3.png",
       tags: ["Google", "Trending", "New"],
       title: "Loudest à la Madison #1 (L'integral)",
       description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",

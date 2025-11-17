@@ -1,4 +1,3 @@
-import React from 'react';
 import { Facebook, Twitter, Instagram } from "react-feather";
 import { Link } from 'react-router-dom';
 

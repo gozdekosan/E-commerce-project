@@ -42,14 +42,14 @@ const ProductCard = ({ title,image }) => {
 
 const FeaturedProducts = () => {
   const featured = [
-    { id: 1, title: "Casual Jacket", price: 59.99, image: "src/images/featuredprod-1.png" },
-    { id: 2, title: "Leather Bag", price: 89.99, image: "src/images/featuredprod-2.png" },
-    { id: 3, title: "Sneakers", price: 69.99, image: "src/images/featuredprod-3.png" },
-    { id: 4, title: "Sunglasses", price: 29.99, image: "src/images/featuredprod-4.png" },
-    { id: 5, title: "Casual Jacket", price: 59.99, image: "src/images/featuredprod-5.png" },
-    { id: 6, title: "Leather Bag", price: 89.99, image: "src/images/featuredprod-6.png" },
-    { id: 7, title: "Sneakers", price: 69.99, image: "src/images/featuredprod-7.png" },
-    { id: 8, title: "Sunglasses", price: 29.99, image: "src/images/featuredprod-8.png" }
+    { id: 1, title: "Casual Jacket", price: 59.99, image: "/images/featuredprod-1.png" },
+    { id: 2, title: "Leather Bag", price: 89.99, image: "/images/featuredprod-2.png" },
+    { id: 3, title: "Sneakers", price: 69.99, image: "/images/featuredprod-3.png" },
+    { id: 4, title: "Sunglasses", price: 29.99, image: "/images/featuredprod-4.png" },
+    { id: 5, title: "Casual Jacket", price: 59.99, image: "/images/featuredprod-5.png" },
+    { id: 6, title: "Leather Bag", price: 89.99, image: "/images/featuredprod-6.png" },
+    { id: 7, title: "Sneakers", price: 69.99, image: "/images/featuredprod-7.png" },
+    { id: 8, title: "Sunglasses", price: 29.99, image: "/images/featuredprod-8.png" }
   ];
 
   return (

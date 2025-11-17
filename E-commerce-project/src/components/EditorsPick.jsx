@@ -1,9 +1,9 @@
 
  export const editorsProducts = [
-  { id: 1, title: "MEN", link: "/shop/men", image: "src/images/men.png", size: "large" }, 
-  { id: 2, title: "WOMEN", link: "/shop/women", image: "src/images/women.png", size: "tall" }, 
-  { id: 3, title: "ACCESSORIES", link: "/shop/accessories", image: "src/images/accessories.png", size: "half-tall" }, 
-  { id: 4, title: "KIDS", link: "/shop/kids", image: "src/images/kids.png", size: "half-tall" } 
+  { id: 1, title: "MEN", link: "/shop/men", image: "/images/men.png", size: "large" }, 
+  { id: 2, title: "WOMEN", link: "/shop/women", image: "/images/women.png", size: "tall" }, 
+  { id: 3, title: "ACCESSORIES", link: "/shop/accessories", image: "/images/accessories.png", size: "half-tall" }, 
+  { id: 4, title: "KIDS", link: "/shop/kids", image: "/images/kids.png", size: "half-tall" } 
 ];
 
 
