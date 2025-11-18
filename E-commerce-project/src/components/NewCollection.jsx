@@ -38,7 +38,7 @@ export default function NewCollection() {
         navigation
         pagination={{ clickable: true }}
         className="
-          h-[38.4375rem]  // Tekrarlanan h- sınıfını temizledik
+          h-[38.4375rem]
 
           [&_.swiper-button-next]:!text-white
           [&_.swiper-button-prev]:!text-white
@@ -63,7 +63,7 @@ export default function NewCollection() {
               style={{
                 backgroundImage: `url(${slide.bgImage})`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "center top", 
               }}
             >
               <h2 className="text-base mb-4 font-bold text-white">
