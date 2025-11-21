@@ -1,5 +1,4 @@
 import { 
-  BrowserRouter, 
   Routes,      
   Route        
 } from "react-router-dom";
@@ -7,6 +6,7 @@ import {
 import HomePage from "../pages/HomePage.jsx";
 import LoginPage from "../pages/LoginPage.jsx";
 import RegisterPage from "../pages/RegisterPage.jsx";
+import ShopPage from "../pages/ShopPage.jsx";
 
 export default function PageContent() {
   return (
@@ -17,7 +17,7 @@ export default function PageContent() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-
+            <Route path="/shop" element={<ShopPage />} />
           </Routes>
       </main>
     </div>
