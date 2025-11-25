@@ -63,7 +63,7 @@ export default function SummerCollection() {
     [&_.swiper-pagination-bullet]:!w-12
     [&_.swiper-pagination-bullet]:!h-2
     [&_.swiper-pagination-bullet]:!rounded-none
-    [&_.swiper-pagination-bullet]:!m-0        /* boşlukları kaldırır */
+    [&_.swiper-pagination-bullet]:!m-0        
 
     [&_.swiper-pagination-bullet-active]:!opacity-100
   "
@@ -144,7 +144,7 @@ export default function SummerCollection() {
             </Link>
 
             <Link
-              to={promoBlockContent.readMoreLink}
+              to="/productdetails"
               className="text-[#2DC071] border-2 border-[#2DC071] hover:bg-[#2DC071] hover:text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded transition duration-300"
             >
               READ MORE

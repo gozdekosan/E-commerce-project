@@ -19,7 +19,7 @@ const MOCK_PRODUCTS = [
   { id: 12, title: "Graphic Design", category: "English Department", price: 14.00, oldPrice: 25.00, image: "/images/categorycard-12.png" },
 ];
 
-export default function ShopProductGrid() {
+export default function ShopCategoryCards() {
   return (
     <section className="py-10 md:py-16 bg-white">
       <div className="max-w-[71.25rem] mx-auto px-4 sm:px-6 lg:px-8">
