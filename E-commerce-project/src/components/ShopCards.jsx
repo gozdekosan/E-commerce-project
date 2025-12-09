@@ -10,32 +10,31 @@ const CATEGORIES = [
 
 export default function ShopCards() {
   return (
-    <section className="bg-white py-8 md:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-8">
+    <section className="bg-white py-6 md:py-10 lg:py-12">
+      <div className="max-w-[71.25rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           
           {CATEGORIES.map((category) => (
             <Link 
               key={category.id}
               to={`/shop/${category.name.toLowerCase()}`}
-              className="relative w-full aspect-[300/348] md:aspect-[348/300] group overflow-hidden" 
+              className="relative block w-full h-[280px] sm:h-[320px] lg:h-[300px] group overflow-hidden" 
             >
-              
-              <div className="relative w-full h-full">
-                <img
-                  src={category.image}
-                  alt={category.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                />
 
-                <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center">
-                  <h3 className="text-white text-lg sm:text-xl font-bold tracking-wider mb-1 md:mb-2">
-                    {category.name}
-                  </h3>
-                  <p className="text-white text-sm md:text-base">
-                    {category.count} Items
-                  </p>
-                </div>
+              <img
+                src={category.image}
+                alt={category.alt}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" 
+              />
+
+              <div className="absolute inset-0 bg-black/40"></div>
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+                <h3 className="text-white text-sm sm:text-base font-bold tracking-wide mb-1 sm:mb-2">
+                  {category.name}
+                </h3>
+                <p className="text-white text-xs sm:text-sm font-normal">
+                  {category.count} Items
+                </p>
               </div>
             </Link>
           ))}

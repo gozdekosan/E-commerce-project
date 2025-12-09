@@ -1,7 +1,6 @@
 import { Twitter, Facebook, Instagram, Linkedin } from 'react-feather';
 
 const GetInTouch = () => {
-  const primaryColor = 'blue-600'; 
   const imagePath = '/images/getintouch.png'; 
   
   return (
@@ -11,20 +10,20 @@ const GetInTouch = () => {
         
        
         <p className="text-sm font-bold text-gray-700 tracking-widest uppercase mb-4">CONTACT US</p>
-        <h1 className="text-6xl font-bold text-gray-800 leading-tight mb-6">
+        <h1 className="text-6xl font-bold text-[#252B42] leading-tight mb-6">
           Get in touch <br className="hidden md:inline"/> today!
         </h1>
-        <p className="text-lg text-gray-500 max-w-lg mx-auto lg:mx-0 mb-8">
+        <p className="text-lg text-[#737373] max-w-lg mx-auto lg:mx-0 mb-8">
           We know how large objects will act, but things on a small scale
         </p>
 
         <div className="space-y-4 font-bold mb-8">
-          <p className="text-xl text-gray-800">Phone: <span className={`text-${primaryColor}`}>+451 215 215</span></p>
-          <p className="text-xl text-gray-800">Fax: <span className={`text-${primaryColor}`}>+451 215 215</span></p>
+          <p className="text-xl text-[#252B42]">Phone: <span className={`text-[#252B42]`}>+451 215 215</span></p>
+          <p className="text-xl text-[#252B42]">Fax: <span className={`text-[#252B42]`}>+451 215 215</span></p>
         </div>
         
 
-        <div className={`flex justify-center lg:justify-start space-x-6 text-2xl text-${primaryColor}`}>
+        <div className={`flex justify-center lg:justify-start space-x-6 text-2xl text-[#252B42]`}>
           <Twitter size={28} className="hover:opacity-75 transition duration-300 cursor-pointer" />
           <Facebook size={28} className="hover:opacity-75 transition duration-300 cursor-pointer" />
           <Instagram size={28} className="hover:opacity-75 transition duration-300 cursor-pointer" />

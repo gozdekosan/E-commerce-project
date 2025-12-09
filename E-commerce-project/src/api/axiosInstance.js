@@ -1,17 +1,20 @@
 import axios from 'axios';
+import store from '../redux/store'; 
 
-const axiosInstance = axios.create({
-  baseURL: 'https://workintech-fe-ecommerce.onrender.com',
+const AxiosInstance = axios.create({
+  baseURL: 'https://workintech-fe-ecommerce.onrender.com', 
+  timeout: 5000, 
 });
 
-// Axios Request Interceptor: Her istekten önce çalışır
-// localStorage'da token varsa Authorization başlığına ekler.
-axiosInstance.interceptors.request.use(
+AxiosInstance.interceptors.request.use(
     (config) => {
-        const token = localStorage.getItem('token');
+        const state = store.getState();
+        const token = state.client.token; 
+        
         if (token) {
-            // NOT: Sunucu gereksinimine göre Bearer öneki EKLEMEDEN direkt token'ı koyuyoruz.
-            config.headers.Authorization = token; 
+            config.headers.Authorization = `Bearer ${token}`; 
+        } else {
+            delete config.headers.Authorization; 
         }
         return config;
     },
@@ -20,4 +23,4 @@ axiosInstance.interceptors.request.use(
     }
 );
 
-export default axiosInstance;
+export default AxiosInstance;

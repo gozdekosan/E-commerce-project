@@ -1,0 +1,4 @@
+export const SET_USER_INFO = 'SET_USER_INFO';
+export const SET_LOGIN_LOADING = 'SET_LOGIN_LOADING';
+export const SET_LOGIN_ERROR = 'SET_LOGIN_ERROR';
+export const USER_LOGOUT = 'USER_LOGOUT';

@@ -5,10 +5,14 @@ import {
 
 import HomePage from "../pages/HomePage.jsx";
 import LoginPage from "../pages/LoginPage.jsx";
-import RegisterPage from "../pages/RegisterPage.jsx";
+import SignUpPage from "../pages/SignUpPage.jsx";
 import ShopPage from "../pages/ShopPage.jsx";
 import ProductDetailsPage from "../pages/ProductDetailsPage.jsx";
 import ContactPage from "../pages/ContactPage.jsx";
+import TeamPage from "../pages/TeamPage.jsx";
+import PricingPage from "../pages/PricingPage.jsx";
+import AboutPage from "../pages/AboutPage.jsx";
+import ShoppingCartPage from "../pages/ShoppingCartPage.jsx"; 
 
 export default function PageContent() {
   return (
@@ -18,10 +22,19 @@ export default function PageContent() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
             <Route path="/shop" element={<ShopPage />} />
-            <Route path="/productdetails" element={<ProductDetailsPage />} />
+            <Route 
+                path="/shop/:gender/:categoryName/:categoryId/:productNameSlug/:productId" 
+                element={<ProductDetailsPage />} 
+            />
+            
+            <Route path="/cart" element={<ShoppingCartPage />} /> 
+
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/about" element={<AboutPage />} />
           </Routes>
       </main>
     </div>

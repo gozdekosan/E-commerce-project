@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-// Lucide-react'tan sağ ok ikonu (görseldeki küçük oklar için)
 import { ChevronRight } from 'lucide-react';
 
-// Mock içerik, görseldeki metinlere dayanarak
 const INFO_CONTENT = {
     paragraph1: "Met minim Mollie non desert Alamo est sit aliquip dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.",
     paragraph2: "Met minim Mollie non desert Alamo est sit aliquip dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.",
@@ -13,7 +11,6 @@ const INFO_CONTENT = {
         "the quick fox jumps over the lazy dog",
         "the quick fox jumps over the lazy dog",
     ],
-    // İkinci liste için tekrar eden içerik
     listItems2: [
         "the quick fox jumps over the lazy dog",
         "the quick fox jumps over the lazy dog",
@@ -21,10 +18,8 @@ const INFO_CONTENT = {
     ]
 };
 
-
 export default function ProductDetailsInfo() {
   
-  // Basit Sekme Durumu Yönetimi (Varsayılan olarak Açıklama sekmesi aktif)
   const [activeTab, setActiveTab] = useState('description');
 
   const tabs = [
@@ -36,11 +31,7 @@ export default function ProductDetailsInfo() {
   return (
     <section className="bg-white py-10 md:py-16">
       <div className="max-w-[71.25rem] mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* ======================================= */}
-        {/* SEKMELER BAŞLIĞI (TABS) */}
-        {/* ======================================= */}
-        <div className="border-b border-[#ECECEC] flex justify-center space-x-8 md:space-x-16 mb-10">
+        <div className="border-b border-[#ECECEC] flex justify-start space-x-8 md:space-x-16 mb-10">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -48,8 +39,8 @@ export default function ProductDetailsInfo() {
               className={`
                 text-sm font-bold pb-4 transition duration-300
                 ${activeTab === tab.id 
-                    ? 'text-[#252B42] border-b-2 border-[#252B42]' // Aktif sekme stili
-                    : 'text-[#737373] hover:text-[#252B42]' // Pasif sekme stili
+                    ? 'text-[#252B42] border-b-2 border-[#252B42]'
+                    : 'text-[#737373] hover:text-[#252B42]'
                 }
               `}
             >
@@ -58,18 +49,21 @@ export default function ProductDetailsInfo() {
           ))}
         </div>
 
-        {/* ======================================= */}
-        {/* SEKMELER İÇERİĞİ (TAB CONTENT) */}
-        {/* Bu örnekte sadece "Description" içeriği gösterilmektedir. */}
-        {/* ======================================= */}
         {activeTab === 'description' && (
             <div className="pt-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-24">
-                    
-                    {/* SOL BLOK: GÖRSEL VE METİN */}
-                    <div className="lg:col-span-2 space-y-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 lg:items-stretch">
+                    <div className="lg:col-span-1 relative overflow-hidden rounded-md order-1 lg:order-1"> 
+                        <div className="w-full h-full min-h-[300px] lg:min-h-full bg-[#FAFAFA]">
+                           <img 
+                                src="/images/prod-details-1.png" 
+                                alt="Product Info Visual"
+                                className="w-full h-full object-cover" 
+                           />
+                        </div>
+                    </div>
+
+                    <div className="lg:col-span-1 space-y-4 order-3 lg:order-2"> 
                         
-                        {/* 1. Başlık ve Paragraf Grubu */}
                         <h3 className="text-2xl font-bold text-[#252B42] mb-4">
                             the quick fox jumps over
                         </h3>
@@ -77,34 +71,17 @@ export default function ProductDetailsInfo() {
                             {INFO_CONTENT.paragraph1}
                         </p>
                         
-                        {/* 2. Başlık ve Paragraf Grubu */}
-                        <h3 className="text-2xl font-bold text-[#252B42] mb-4">
-                            the quick fox jumps over
-                        </h3>
                         <p className="text-[#737373] text-sm leading-6">
                             {INFO_CONTENT.paragraph2}
                         </p>
                         
-                        {/* 3. Sadece Paragraf */}
                         <p className="text-[#737373] text-sm leading-6">
                             {INFO_CONTENT.paragraph3}
                         </p>
-
                     </div>
 
-                    {/* SAĞ BLOK: GÖRSEL VE LİSTELER */}
-                    <div className="flex flex-col space-y-12">
-                        
-                        {/* Görsel Kutusu */}
-                        <div className="w-full h-80 bg-[#FAFAFA] relative overflow-hidden">
-                           <img 
-                                src="/images/info-visual.png" // Bu yolu kendi görselinizle değiştirin
-                                alt="Product Info Visual"
-                                className="w-full h-full object-cover"
-                           />
-                        </div>
-
-                        {/* İlk Liste Grubu */}
+       
+                    <div className="lg:col-span-1 space-y-8 order-2 lg:order-3">
                         <div className="space-y-4">
                             <h3 className="text-2xl font-bold text-[#252B42]">
                                 the quick fox jumps over
@@ -112,14 +89,13 @@ export default function ProductDetailsInfo() {
                             <ul className="space-y-2">
                                 {INFO_CONTENT.listItems.map((item, index) => (
                                     <li key={index} className="flex items-start text-[#737373] text-sm">
-                                        <ChevronRight size={18} className="text-[#737373] mr-2 mt-[2px]" />
+                                        <ChevronRight size={18} className="text-[#737373] mr-2 mt-[2px] flex-shrink-0" />
                                         {item}
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         
-                        {/* İkinci Liste Grubu */}
                         <div className="space-y-4">
                             <h3 className="text-2xl font-bold text-[#252B42]">
                                 the quick fox jumps over
@@ -127,18 +103,20 @@ export default function ProductDetailsInfo() {
                             <ul className="space-y-2">
                                 {INFO_CONTENT.listItems2.map((item, index) => (
                                     <li key={index} className="flex items-start text-[#737373] text-sm">
-                                        <ChevronRight size={18} className="text-[#737373] mr-2 mt-[2px]" />
+                                        <ChevronRight size={18} className="text-[#737373] mr-2 mt-[2px] flex-shrink-0" />
                                         {item}
                                     </li>
                                 ))}
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
         )}
 
       </div>
+      
     </section>
   );
 }
