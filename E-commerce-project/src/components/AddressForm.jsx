@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axiosInstance from '../api/AxiosInstance';
+import axiosInstance from '../api/AxiosInstance.js';
 import { X } from 'react-feather';
 
 const CITIES = ["İstanbul", "Ankara", "İzmir", "Bursa", "Antalya"];

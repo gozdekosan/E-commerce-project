@@ -1,4 +1,4 @@
-import axiosInstance from "../../api/AxiosInstance"; 
+import axiosInstance from "../../api/AxiosInstance.js"; 
 import toast from 'react-hot-toast'; 
 import { 
     SET_USER_INFO, 

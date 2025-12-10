@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axiosInstance from '../api/AxiosInstance';
+import axiosInstance from '../api/AxiosInstance.js';
 import NewCardForm from '../components/NewCardForm';
 import { CreditCard, Edit, Trash2, PlusCircle } from 'react-feather';
 

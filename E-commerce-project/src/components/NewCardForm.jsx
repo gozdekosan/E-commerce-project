@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axiosInstance from '../api/AxiosInstance';
+import axiosInstance from '../api/AxiosInstance.js';
 import { CreditCard, X } from 'react-feather';
 
 const emptyCard = {
