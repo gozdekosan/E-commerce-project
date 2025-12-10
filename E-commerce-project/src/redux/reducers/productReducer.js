@@ -7,7 +7,7 @@ import {
     SET_SORT_FILTER,
     SET_SEARCH_FILTER,
     SET_CURRENT_PAGE 
-} from "../actions/ProductActions";
+} from "../actions/productActions";
 
 const initialState = {
     productList: [], 

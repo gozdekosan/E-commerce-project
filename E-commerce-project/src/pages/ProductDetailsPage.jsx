@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProductDetail } from '../redux/actions/ProductActions'; 
+import { fetchProductDetail } from '../redux/actions/productActions'; 
 import { ClipLoader } from 'react-spinners'; 
 import ProductDetailsMain from "../components/ProductDetailsMain";
 import ProductDetailsInfo from "../components/ProductDetailsInfo"; 
