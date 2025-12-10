@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation, Routes, Route } from 'react-router-dom'; 
 import { verifyTokenAndLogin } from './redux/actions/loginActions'; 
-import { fetchCategories, fetchProducts } from './redux/actions/ProductActions'; // İlk yüklemede ürünleri çek
+import { fetchCategories, fetchProducts } from './redux/actions/ProductActions.js'; 
 
 import './App.css'
 import { ToastContainer } from 'react-toastify'
