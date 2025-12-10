@@ -1,4 +1,4 @@
-import axiosInstance from "../../api/AxiosInstance.js";
+import axiosInstance from "../api/AxiosInstance.js";
 
 
 export const SET_CATEGORIES = 'SET_CATEGORIES';
