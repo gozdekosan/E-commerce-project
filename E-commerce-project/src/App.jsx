@@ -17,23 +17,17 @@ function App() {
   
   const [isSessionChecked, setIsSessionChecked] = useState(false); 
   
-  // Header'ın gizleneceği yollar
   const noHeaderPaths = ['/contact', '/team', '/pricing', '/about']; 
   const shouldHideHeader = noHeaderPaths.includes(location.pathname);
   
   useEffect(() => {
     const initializeData = async () => {
         
-        // 1. Oturum Kontrolü
         const token = localStorage.getItem('token');
         if (token) {
             await dispatch(verifyTokenAndLogin());
         }
-
-        // 2. Kategorileri Çekme
         dispatch(fetchCategories()); 
-        
-        // 3. Ürünleri Çekme (Başlangıç filtresiyle)
         dispatch(fetchProducts()); 
 
         setIsSessionChecked(true);
